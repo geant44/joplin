@@ -185,7 +185,7 @@ if command -v lsb_release &> /dev/null; then
   # Check for "The SUID sandbox helper binary was found, but is not configured correctly" problem.
   # It is present in Debian 1X. A (temporary) patch will be applied at .desktop file
   # Linux Mint 4 Debbie is based on Debian 10 and requires the same param handling.
-  if [ $DISTVER =~ Debian1. ] || [ "$DISTVER" = "Linuxmint4" ] && [ "$DISTCODENAME" = "debbie" ] || [ "$DISTVER" = "CentOS"] && [ "$DISTMAJOR" = "7" ]
+  if [ $DISTVER =~ Debian1. ] || [ "$DISTVER" = "Linuxmint4" ] && [ "$DISTCODENAME" = "debbie" ] || [ "$DISTVER" = "CentOS" ] && ( [ "$DISTMAJOR" = "7" ] || [ "$DISTMAJOR" = "6" ] )
   then
     SANDBOXPARAM=" --no-sandbox"
   fi
